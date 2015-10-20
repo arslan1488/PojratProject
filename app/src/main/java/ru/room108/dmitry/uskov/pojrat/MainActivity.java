@@ -87,13 +87,17 @@ public class MainActivity extends AppCompatActivity {
 
     private class MyPagerAdapter extends FragmentPagerAdapter   {
 
-        int[] icons = {R.drawable.ic_action_good, R.drawable.ic_action_refresh, R.drawable.ic_action_menu};
+        int[] icons;
 
         ArrayList<AbstractMyFragment> fragments;
 
         public MyPagerAdapter(FragmentManager fm, ArrayList<AbstractMyFragment> fragments) {
             super(fm);
             this.fragments = fragments;
+            icons = new int[fragments.size()];
+            for(int i=0; i<icons.length; i++){
+                icons[i]=fragments.get(i).getIconId();
+            }
         }
 
         @Override

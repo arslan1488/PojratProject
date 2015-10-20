@@ -9,9 +9,12 @@ abstract public class AbstractMyFragment extends Fragment{
 
     private final Activity mActivity;
 
-    AbstractMyFragment(String TITLE, Activity mActivity){
+    private int iconId;
+
+    AbstractMyFragment(String TITLE, Activity mActivity, int iconId){
         this.TITLE=TITLE;
         this.mActivity = mActivity;
+        this.iconId=iconId;
     }
 
     public String getTitle(){
@@ -20,5 +23,9 @@ abstract public class AbstractMyFragment extends Fragment{
 
     public Activity getParentActivity(){
         return mActivity;
+    }
+
+    public int getIconId() {
+        return iconId;
     }
 }
