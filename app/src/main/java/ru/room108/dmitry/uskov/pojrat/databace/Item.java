@@ -116,7 +116,7 @@ public class Item {
         public static final String SAUCES = "Соусы";
         public static final String COMBOS = "Наборы";
         public static final String BREAKFASTS = "Завтраки";
-        public static final String BEER = "Завтраки";
+        public static final String BEER = "Пиво";
         public static final String SPECIAL_OFFERS = "Фирменные блюда";
 
 
