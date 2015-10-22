@@ -1,4 +1,4 @@
-package ru.room108.dmitry.uskov.pojrat;
+package ru.room108.dmitry.uskov.pojrat.databace;
 
 /**
  * Created by Dmitry on 22.10.2015.

@@ -1,4 +1,4 @@
-package ru.room108.dmitry.uskov.pojrat;
+package ru.room108.dmitry.uskov.pojrat.databace;
 
 
 //Item.Builder().setXXX().setXXX().create;
@@ -107,5 +107,19 @@ public class Item {
 
     }
 
+    public class Categories {
+        public static final String BURGERS = "Бургеры";
+        public static final String SNACKS = "Снеки";
+        public static final String DRINKS = "Напитки";
+        public static final String SALADS = "Салаты";
+        public static final String DESSERTS = "Десерты";
+        public static final String SAUCES = "Соусы";
+        public static final String COMBOS = "Наборы";
+        public static final String BREAKFASTS = "Завтраки";
+        public static final String BEER = "Завтраки";
+        public static final String SPECIAL_OFFERS = "Фирменные блюда";
+
+
+    }
 
 }

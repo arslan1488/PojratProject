@@ -3,7 +3,7 @@ package ru.room108.dmitry.uskov.pojrat.logic;
 
 import java.util.ArrayList;
 
-import ru.room108.dmitry.uskov.pojrat.Item;
+import ru.room108.dmitry.uskov.pojrat.databace.Item;
 
 public class Algorithm {
 
