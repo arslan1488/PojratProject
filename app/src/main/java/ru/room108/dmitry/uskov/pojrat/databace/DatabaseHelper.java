@@ -1,7 +1,7 @@
 package ru.room108.dmitry.uskov.pojrat.databace;
 
+import android.content.ContentValues;
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
@@ -40,9 +40,32 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+
+    private void addItemKFC() {
+        SQLiteDatabase mSqLiteDatabase = this.getWritableDatabase();
+
+        //mSqLiteDatabase.insert(DATABASE_TABLE, null, getContenValuesItem());
+    }
+
+    private ContentValues getContenValuesItem(String name, String category, int imageId, double price, EnergyValue energyValue) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_NAME, name);
+        contentValues.put(COLUMN_CATEGORY, category);
+        contentValues.put(COLUMN_IMAGE_ID, imageId);
+        contentValues.put(COLUMN_PRICE, price);
+
+        contentValues.put(COLUMN_PROTEIN, energyValue.getProtein());
+        contentValues.put(COLUMN_FATS, energyValue.getFats());
+        contentValues.put(COLUMN_CARBOHYDRATES, energyValue.getCarbohydrates());
+        contentValues.put(COLUMN_NUTRITIONAL_VALUR, energyValue.getNutritionalValue());
+
+        return contentValues;
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DATABASE_CREATE_SCRIPT);
+        addItemKFC();
     }
 
     @Override
