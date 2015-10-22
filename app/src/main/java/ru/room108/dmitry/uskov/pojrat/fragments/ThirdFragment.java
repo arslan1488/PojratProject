@@ -12,8 +12,10 @@ public class ThirdFragment extends AbstractMyFragment {
 
     public static final String title = "Меню";
 
+    public static final int ICON_ID= R.drawable.ic_action_menu;
+
     public  ThirdFragment(Activity mActivity){
-        super(title, mActivity);
+        super(title, mActivity, ICON_ID);
     }
 
     @Override
